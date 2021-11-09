@@ -1,0 +1,51 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section> 
+        <div class="cust">
+        <form method="post">
+            <div>Name: <input type="text" name="name" /></div>
+            <div>Address: <input type="text" name="address" /></div>
+            <div>City: <input type="text" name="city" /></div>
+            
+            <!-- <div>Province: <input type="text" name="province" placeholder="abc, def, efg" /></div> -->
+            <div>Province: <select id="provin" name="province">
+                <option>Alberta</option>
+                <option>British Columbia</option>
+                <option>Manitoba</option>
+                <option>New Brunswick</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Northwest Territories</option>
+                <option>Nova Scotia</option>
+                <option>Nunavut</option>
+                <option>Ontario</option>
+                <option>Prince Edward Island</option>
+                <option>Quebec</option>
+                <option>Saskatchewan</option>
+                <option>Yukon</option>
+
+            </select></div>
+
+            <div>Phone: <input type="text" name="phone" /></div>
+            <div>Email: <input type="text" name="email" /></div>
+            <div>Pincode: <input type="text" name="pincode" /></div>
+            <div>Delivery: <select name="delivery">
+                <option value="1">1 day</option>
+                <option value="2">2 days</option>
+                <option value="3">3 days</option>
+            </select></div>
+        </div>
+            <% errors.forEach(function(error){ %>
+                <p class="error"><%= error.msg %></p>
+            <% }); %>
+            <input type="submit" />
+        </form>
+    </section>
+<div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>
+
+
+
+
+

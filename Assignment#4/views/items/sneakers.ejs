@@ -1,0 +1,40 @@
+<%- include('../layouts/header'); -%>
+<body>
+    <%- include('../layouts/nav'); -%>
+    <section>
+        <div class="itemDetails">
+            <h2>Sneakers</h2>
+                        <img height="350px" width="250px" src="../../pics/sneakers.jpg">
+            
+                        <p id="tshirtmessage">Aravind's laceup casual shoes<br></p>
+                        
+                           <ul>
+                               <li>Loe-Top Lace up</li>
+                               <li>Fabric upper</li>
+                               <li>3 month warranty</li>
+                           </ul> 
+                        </div>
+                <form method="post">
+
+                    <input id="pdt" placeholder="Quantity" type="text" name="qty"><br/>
+                    <input type="hidden" name="price" value="6"><br/>
+                    <input type="submit" id="addToCart" value="Add to Cart"/>
+                </form>
+
+                <div>
+                    <% errors.forEach(function(error){ %>
+                        <p class="error"><%= error.msg %></p>
+                    <% }); %>
+                </div>
+    </section>
+
+</body>
+<%- include('../layouts/footer'); -%>
+
+
+
+
+
+
+
+

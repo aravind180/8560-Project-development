@@ -1,0 +1,69 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    
+    <% allOrders.forEach(function(customer){ %>
+    <section class="centered">
+        <table border="1" class="table">
+            <tr>
+                <th>Customer name:</th>
+                <td><%= customer.name %></td>
+            </tr>
+            <tr>
+                <th>Customer address:</th>
+                <td><%= customer.address %></td>
+            </tr>
+            <tr>
+                <th>Customer city:</th>
+                <td><%= customer.city %></td>
+            </tr>
+            <tr>
+                <th>Customer Province:</th>
+                <td><%= customer.province %></td>
+            </tr>
+            <tr>
+                <th>Customer email:</th>
+                <td><%= customer.email %></td>
+            </tr>
+
+        </table>
+
+        
+        <table border="1" class="table">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price in $</th>
+                <th>Tax (<%= customer.tax %>%)</th>
+            </tr>
+            <% customer['cart'].forEach(function(item){ %>
+                <tr class="child">
+                    <td><%= item.id %></td>
+                    <td><%= item.qty %></td>
+                    <td>$<%= item.rowPrice %></td>
+                    <td>$<%= item.rowTax %></td>
+                </tr>
+            <% }); %>
+            <tr class="child">
+                <td colspan="2">Total price</td>
+                <td>$<%= customer.totalPrice %></td>
+            </tr>
+            <tr>
+                <td colspan="2">Total Tax</td>
+                <td>$<%= customer.totalTax %></td>
+            </tr>
+            <tr class="child">
+                <td colspan="2">Delivery charge</td>
+                <td colspan="1">$<%= customer.delCharge %></td>
+            </tr>
+            <tr>    
+                <td colspan="2">Grand Total </td>
+                <td>$<%= customer.totalPrice + customer.totalTax + customer.delCharge %></td>
+            </tr>
+        </table>  
+    </div>
+</section>
+
+<% }); %>
+</body>
+<%- include('layouts/footer'); -%>

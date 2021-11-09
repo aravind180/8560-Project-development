@@ -1,0 +1,26 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section>
+        <div class="homeStyle">
+        
+            <div class="main">
+                <h2>Select your items</h2>
+                    <% items.forEach(function(item){ %>
+                        <div class="child">
+                            <h4><%= item.name %></h4>
+                            <img class="smallimg" src='/pics/<%= item.id %>.jpg'>
+                            <a href="items/<%= item.id %>">Buy now</a>
+                        </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+<div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>
+
+
+
+
+

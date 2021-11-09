@@ -1,0 +1,119 @@
+body{
+    background-color: #9c8bca;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    width: 960px;
+    margin: 50px auto;
+    box-shadow: 6px 5px 4px black;
+    border: #dad8c9 double 12px;
+    border-radius: 20px;
+
+}
+
+.clear{
+    clear: both;
+}
+.itemDetails{
+    width: 35%;
+    margin-left: 30%;
+}
+.error{
+    color: rgb(207, 7, 7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+.homeStyle{
+    width: 400px;
+    border: 3px solid white;
+    box-shadow: 2px 4px 10px #080000;
+    padding: 25px;
+    margin: 50px auto;
+    color: white;
+    background-color: #07b207;
+    border-radius: 20px;
+}
+label{
+    width: 170px;
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+}
+#pdt{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 0 40%;
+
+}
+select{
+    width: 190px;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    width: 150px;
+    font-size: 22px;
+    background-color: #8f8939;
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    border: 0px;
+    padding: 10px;
+    padding-left: 10px;
+    height: 50px;
+    box-shadow: 4px 4px 0px #030300;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+input[type="submit"]:active{
+    box-shadow: -4px -4px 0px black;
+    border: whitesmoke double;
+}
+.top_menu{
+    background-color: #11088c;
+    border: 1px solid white;
+    box-shadow: 4px 4px 10px #df5757;
+    color: white;
+    border-radius: 20px;
+}
+
+.top_menu ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+.top_menu ul li{
+    display: inline-block;
+    width: 150px;
+}
+
+.top_menu ul li:hover{
+    background-color: #07b2a4;
+}
+.top_menu ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.smallimg {
+    height: 250px;
+    width: 200px;
+}
+.centered {
+    text-align: center;
+}
+.cust{
+    margin: 0 40%;
+}
+#provin{
+    font-size: 13px;
+}

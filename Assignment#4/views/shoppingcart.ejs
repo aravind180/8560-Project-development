@@ -1,0 +1,37 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section class="centered">
+            <table border="1" class="table">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <% let totalPrice = 0; %>
+                <% cart.forEach(function(item){ %>
+                    <tr class="child">
+                        <td><%= item.id %></td>
+                        <td><%= item.qty %></td>
+                        <td><%= item.price * item.qty %></td>
+                        <% totalPrice += item.price * item.qty; %>
+                    </tr>
+                <% }); %>
+                <tr class="child">
+                    <td colspan="2">Total</td>
+                    <td><%= totalPrice %></td>
+                </tr>
+                
+            </table>  
+            <%- totalPrice < 10 ? "<p>Cart value should be more than $10 to proceed.</p>" : "<a href='/receipt'>Proceed to checkout<br></a>" %>
+        </div>
+        <a href="/clear">Clear cart</a>
+    </section>
+<div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>
+
+
+
+
+
